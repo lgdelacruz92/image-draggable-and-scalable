@@ -6,7 +6,8 @@ const useStyles = MUI.makeStyles(theme => {
     nativeImage: {
       width: "100%",
       height: "100%",
-      objectFit: "contain"
+      objectFit: "contain",
+      verticalAlign: "top"
     }
   };
 });
