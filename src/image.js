@@ -1,6 +1,5 @@
 import React from "react";
 import NativeImage from "./nativeimage";
-import TranslateOverlay from "./translateoverlay";
 import * as MUI from "@material-ui/core";
 import { translate } from "./translatejss";
 
@@ -21,7 +20,6 @@ const useStyles = MUI.makeStyles(theme => {
 const Image = props => {
   const classes = useStyles(props);
   const [state, setState] = React.useState(null);
-  const [openTranslateOverlay, setOpenTranslateOverlay] = React.useState(null);
   React.useState(() => {
     setState({ ...props });
   }, []);
@@ -31,7 +29,6 @@ const Image = props => {
         {state ? (
           <React.Fragment>
             <NativeImage src={state.src} alt={state.alt} id={state.id} />
-            <TranslateOverlay imgState={state} open={true} />
           </React.Fragment>
         ) : null}
       </div>

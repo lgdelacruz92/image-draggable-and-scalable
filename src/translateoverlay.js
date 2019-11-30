@@ -16,8 +16,7 @@ const useStyles = MUI.makeStyles(theme => {
 
 const TranslateOverlay = props => {
   const classes = useStyles(props.imgState);
-  console.log(props.imgState);
-  return <div className={classes.translateOverlay} />;
+  return <div className={classes.translateOverlay} hidden={!props.open} />;
 };
 
 export default TranslateOverlay;
